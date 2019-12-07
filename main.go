@@ -7,6 +7,6 @@ import (
 
 func main() {
 	api := martini.Classic()
-	api.Any("/ping", handlers.PingHandler)
+	api.Get("/ping", handlers.PingHandler)
 	api.Run()
 }
