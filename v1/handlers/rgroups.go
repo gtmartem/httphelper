@@ -8,7 +8,7 @@ import (
 )
 
 var history []string
-var rGroups map[string]*models.RGroup
+var rGroups = make(map[string]*models.RGroup)
 
 // CreateRGroups - creates RGroup with random tag
 func CreateRGroups(r render.Render) {
