@@ -8,14 +8,15 @@ import (
 
 func PingHandler(res http.ResponseWriter, req *http.Request) {
 	res.Header().Add("Content-Type", "application/json")
-	res.WriteHeader(500)
 	ping, err := schemas.Create()
 	if err != nil {
+		res.WriteHeader(500)
 		res.Write([]byte("Internal server error"))
 		log.WithError(err).Error("Error")
 	}
 	_, err = res.Write(ping)
 	if err != nil {
+		res.WriteHeader(500)
 		res.Write([]byte("Internal server error"))
 		log.WithError(err).Error("Error")
 	}
