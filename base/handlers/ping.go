@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"github.com/gtmartem/httphelper/schemas"
+	"github.com/gtmartem/httphelper/base/schemas"
 	log "github.com/sirupsen/logrus"
 	"net/http"
 )
