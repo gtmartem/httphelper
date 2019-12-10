@@ -13,4 +13,8 @@ func CreateV2(api *martini.ClassicMartini) {
 	api.Delete("/v2/headers/", handlers.DeleteHeaders)
 	api.Put("/v2/headers/", handlers.PutHeaders)
 	api.Patch("/v2/headers/", handlers.PatchHeaders)
+	// return ip by method:
+	api.Get("/v2/ip/", handlers.GetIP)
+	// return User-Agent by method:
+	api.Get("/v2/user-agent/", handlers.GetUserAgent)
 }
