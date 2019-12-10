@@ -1,4 +1,4 @@
-package handlers
+package validation
 
 import (
 	"github.com/martini-contrib/render"
