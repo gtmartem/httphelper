@@ -27,3 +27,8 @@ type Storage interface {
 	// CreateRequest is the method that allow to create request in RGroup
 	CreateRequest(rgroup *models.RGroup, req *models.Request) error
 }
+
+// BaseStorage is struct that presents common storage structure
+type BaseStorage struct {
+	maxRequests		int
+}
