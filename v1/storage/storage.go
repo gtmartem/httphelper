@@ -30,5 +30,5 @@ type Storage interface {
 
 // BaseStorage is struct that presents common storage structure
 type BaseStorage struct {
-	maxRequests		int
+	MaxRequests		int
 }
