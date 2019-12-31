@@ -2,6 +2,7 @@ package v2
 
 import (
 	"github.com/go-martini/martini"
+	"github.com/gtmartem/httphelper/v2/handlers/data"
 	"github.com/gtmartem/httphelper/v2/handlers/validation"
 )
 
@@ -17,4 +18,6 @@ func CreateV2(api *martini.ClassicMartini) {
 	api.Get("/v2/ip/", validation.GetIP)
 	// return User-Agent by method:
 	api.Get("/v2/user-agent/", validation.GetUserAgent)
+	// return UUID by method:
+	api.Get("/v2/uuid/", data.GetUUID)
 }
