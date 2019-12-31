@@ -20,4 +20,6 @@ func CreateV2(api *martini.ClassicMartini) {
 	api.Get("/v2/user-agent/", validation.GetUserAgent)
 	// return UUID by method:
 	api.Get("/v2/uuid/", data.GetUUID)
+	// return headers after delay:
+	api.Get("/v2/delay/", data.GetDelay)
 }
